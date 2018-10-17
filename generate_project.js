@@ -1,6 +1,44 @@
 const fs = require('fs');
+const {exec} = require('child_process')
 const { spawn } = require('child_process');
 const ls = spawn('ls', ['-lh', '/usr']);
+
+exec('npm init -y', () => {
+    exec('npm install', () => {
+    });
+});
+
+
+fs.copyFile('project/index.js', 'index.js', (err) => {
+    if (err) throw err;
+    fs.copyFile('project/.eslintrc', '.eslintrc', (err) => {
+        if (err) throw err;
+        fs.copyFile('project/README.md', 'README.md', (err) => {
+            if (err) throw err;
+            fs.copyFile('project/.gitignore', '.gitignore', (err) => {
+                if (err) throw err;
+                fs.copyFile('project/spec', 'spec', (err) => {
+                    if (err) throw err;
+                    fs.copyFile('project/spec/index.spec.js', 'spec/index.spec.js', (err) => {
+                        if (err) throw err;
+                        exec('git init', () => {
+                            exec('git add .', () => {
+                                exec('git commit -m \'Basic project created\'', () => {
+                                    
+                                })
+                            })
+                        })
+                    });
+                });
+            })
+        })
+    })
+})
+
+
+
+
+
 
 /*
 fs.mkdir('project', () => {
@@ -14,3 +52,8 @@ fs.mkdir('project', () => {
     fs.writeFile('project/.eslintrc', 'the linting code', ()=>{});
 });
 */
+
+    /*exec('eslint', () => {
+    
+        });
+  exec('./node_modules/.bin/eslint --init', () => {})*/

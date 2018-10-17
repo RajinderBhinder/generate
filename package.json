@@ -1,0 +1,20 @@
+{
+  "name": "generate",
+  "version": "1.0.0",
+  "main": "generate_project.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RajinderBhinder/generate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RajinderBhinder/generate/issues"
+  },
+  "homepage": "https://github.com/RajinderBhinder/generate#readme",
+  "description": "Please read me"
+}
